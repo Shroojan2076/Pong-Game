@@ -25,12 +25,13 @@ Features
 
 Project Structure
 
-    Files                    Role
-    main.py        # Game loop and control logic
-    ball.py        # Ball physics and movement
-    paddle.py      # Paddle movement and input handling
-    score.py       # Score tracking and display
-    menu.py        # UI buttons and dashboard
+    Files       |             Role
+    ------------+----------------------------------------
+    main.py     |   # Game loop and control logic
+    ball.py     |   # Ball physics and movement
+    paddle.py   |   # Paddle movement and input handling
+    score.py    |   # Score tracking and display
+    menu.py     |   # UI buttons and dashboard
 
 
 Concepts Implemented
@@ -132,12 +133,12 @@ Dashboard positioned at bottom of screen
 
 Controls
 
-    Action	            Key
-     
-    Left Paddle Up       W	     
-    Left Paddle Down	 S
-    Right Paddle Up	     ↑
-    Right Paddle Down	 ↓
+    Action	           |  Key
+    -------------------+----- 
+    Left Paddle Up     |   W	     
+    Left Paddle Down   |   S
+    Right Paddle Up	   |   ↑
+    Right Paddle Down  |   ↓
 
 Mouse:
 
