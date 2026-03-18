@@ -1,42 +1,44 @@
-Pong Game (Python Turtle)
+# Pong Game (Python Turtle)
 
 A fully interactive recreation of the classic Pong game, built using Python’s Turtle graphics module.
 This project demonstrates game loop design, event-driven programming, object-oriented architecture, and basic UI systems.
 
 
-Features
+## Features
 
-- Two-player gameplay
+* Two-player gameplay
 
-- Pause / Resume toggle
+* Pause / Resume toggle
 
-- Restart functionality
+* Restart functionality
 
-- Quit button
+* Quit button
 
-- State-based game control system
+* State-based game control system
 
-- Clickable UI dashboard (buttons)
+* Clickable UI dashboard (buttons)
 
-- Real-time score tracking
+* Real-time score tracking
 
-- Dynamic ball speed (increases on paddle hit)
-
-
-Project Structure
-
-    Files       |             Role
-    ------------+----------------------------------------
-    main.py     |   # Game loop and control logic
-    ball.py     |   # Ball physics and movement
-    paddle.py   |   # Paddle movement and input handling
-    score.py    |   # Score tracking and display
-    menu.py     |   # UI buttons and dashboard
+* Dynamic ball speed (increases on paddle hit)
 
 
-Concepts Implemented
+## Project Structure
 
-1. Game Loop Architecture
+```
+Pong-Game/
+|
+├── main.py        # Game loop and control logic
+├── ball.py        # Ball physics and movement
+├── paddle.py      # Paddle movement and input handling
+├── score.py       # Score tracking and display
+├── menu.py        # UI buttons and dashboard
+
+```
+
+## Concepts Implemented
+
+### 1. Game Loop Architecture
 
 The game runs on a continuous loop:
 
@@ -52,7 +54,7 @@ while game_on:
     update_screen()
     process_game_logic()
 
-2. State Management System
+### 2. State Management System
 
 The game uses a state variable to control behavior:
 
@@ -62,7 +64,7 @@ The game uses a state variable to control behavior:
 
 This ensures smooth pause/resume functionality without breaking the loop.
 
-3. Event-Driven Input System
+### 3. Event-Driven Input System
 
 Instead of directly moving paddles on key press, the game uses state-based input tracking:
 
@@ -74,7 +76,7 @@ Smooth continuous movement
 
 Better control handling (like real games)
 
-4. Object-Oriented Design
+### 4. Object-Oriented Design
 
 Each component is modular and independent:
 
@@ -94,7 +96,7 @@ Maintainable
 
 Easy to extend
 
-5. Collision Detection
+### 5. Collision Detection
 
 The game uses distance-based logic:
 
@@ -108,7 +110,7 @@ Wall bouncing
 
 Goal detection
 
-6. Dynamic Difficulty
+### 6. Dynamic Difficulty
 
 Ball speed increases after each paddle hit:
 
@@ -120,7 +122,7 @@ Progressive difficulty
 
 Better gameplay experience
 
-7. UI System (Custom Buttons)
+### 7. UI System (Custom Buttons)
 
 A simple UI system is built using Turtle:
 
@@ -131,48 +133,55 @@ Text is dynamically updated (e.g., Pause → Resume)
 Dashboard positioned at bottom of screen
 
 
-Controls
+## Controls
 
-    Action	           |  Key
-    -------------------+----- 
-    Left Paddle Up     |   W	     
-    Left Paddle Down   |   S
-    Right Paddle Up	   |   ↑
-    Right Paddle Down  |   ↓
+```
++--------------------+-------+
+| Action	         |  Key  |
++--------------------+-------+
+| Left Paddle Up     |   W	 |    
+| Left Paddle Down   |   S   |
+| Right Paddle Up	 |   ↑   |
+| Right Paddle Down  |   ↓   |
++--------------------+-------+
+```
 
-Mouse:
+### Mouse:
 
-Click buttons to Pause / Restart / Quit
+Click buttons to `Pause` / `Restart` / `Quit`
 
 
-How to Run
+## How to Run
 
-Clone the repository:
+### 1. Clone the repository:
 
-git clone https://github.com/YOUR_USERNAME/pong-game.git
+```bash
+git clone https://github.com/Shroojan2076/Pong-Game.git
+```
 
-Navigate into the folder:
-
+### 2. Navigate into the folder:
+```
 cd pong-game
+```
 
-Run the game:
-
+### 3. Run the game:
+```
 python main.py
+```
 
-
-Preview
+## Preview
 
 ![Game Screenshot](screenshot.png)
 
 
-Technologies Used
+## Technologies Used
 
 Python
 
 Turtle Graphics
 
 
-Through this project, I explored:
+## Through this project, I explored:
 
 Game loop design
 
@@ -185,11 +194,11 @@ Object-oriented design in Python
 Basic UI systems without external libraries (as turtle is a built-in library)
 
 
-Author
+## Author
 
-Shroojan Dhok
+Built by **Shroojan Dhok**
 
 
-If you like this project
+## If you like this project
 
-Give it a ⭐ on GitHub!
+## Give it a ⭐ on GitHub!
