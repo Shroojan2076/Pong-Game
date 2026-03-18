@@ -22,9 +22,11 @@ def play_pause_game():
     global game_state
     if game_state == "paused":
         game_state = "running"
+        score.hide_pause()
         menu.play_pause_btn.set_text("Pause")
     elif game_state == "running":
         game_state = "paused"
+        score.paused()
         menu.play_pause_btn.set_text("Resume")
 
 def quit_game():
@@ -57,30 +59,35 @@ scr.onkeypress(l_pad.pressed_down, 's')
 scr.onkeyrelease(l_pad.released_down, 's')
     
 game_on = True
-while game_on:
-    scr.update()
-    if game_state == 'running':
-        time.sleep(ball.fast)
-        ball.move()
-        l_pad.up()
-        l_pad.down()
-        r_pad.up()
-        r_pad.down()
-        if ball.ycor() >= 290 or ball.ycor() <= -290:
-            ball.bounce_y()
+try:
+    while game_on:
+        scr.update()
+        if game_state == 'running':
+            time.sleep(ball.fast)
+            ball.move()
+            l_pad.up()
+            l_pad.down()
+            r_pad.up()
+            r_pad.down()
+            if ball.ycor() >= 290 or ball.ycor() <= -290:
+                ball.bounce_y()
 
-        if abs(ball.xcor() - r_pad.xcor()) < 20 and abs(ball.ycor() - r_pad.ycor()) < 55:
-            ball.bounce_x()
+            if abs(ball.xcor() - r_pad.xcor()) < 20 and abs(ball.ycor() - r_pad.ycor()) < 55:
+                ball.bounce_x()
+                
+            if abs(ball.xcor() - l_pad.xcor()) < 20 and abs(ball.ycor() - l_pad.ycor()) < 55:
+                ball.bounce_x()
             
-        if abs(ball.xcor() - l_pad.xcor()) < 20 and abs(ball.ycor() - l_pad.ycor()) < 55:
-            ball.bounce_x()
-        
-        if ball.xcor() >= 395:
-            ball.reset_pos()
-            score.l_increment()
-            
-        if ball.xcor() <= -395:
-            ball.reset_pos()
-            score.r_increment()
+            if ball.xcor() >= 395:
+                ball.reset_pos()
+                score.l_increment()
+                
+            if ball.xcor() <= -395:
+                ball.reset_pos()
+                score.r_increment()
 
-scr.exitonclick()
+except Exception as e:
+    print(e)
+    print('Game Closed')
+
+scr.mainloop()

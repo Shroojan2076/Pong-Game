@@ -15,6 +15,11 @@ class Scoreboard(Turtle):
         self.goto(0, 245)
         self.write("PONG", align='center', font=("Trebuchet MS", 36, 'bold'))
 
+        self.pause = Turtle()
+        self.pause.hideturtle()
+        self.pause.penup()
+        self.pause.color('white')
+        
     def update(self):
         self.clear()
         self.goto(-150, 250)
@@ -37,4 +42,11 @@ class Scoreboard(Turtle):
         self.r_score = 0
         self.l_score = 0
         self.update()
+
+    def paused(self):
+        self.pause.goto(0, 0)
+        self.pause.write("Paused", align="center", font=("Arial", 20, "bold"))
+
+    def hide_pause(self):
+        self.pause.clear()
 
